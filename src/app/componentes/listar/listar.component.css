@@ -1,0 +1,9 @@
+.card-header span {
+    font-size: 1.5rem; /* Aumenta el tamaño del texto */
+    font-weight: bold; /* Hace que el texto sea negrita */
+}
+
+.custom-input-small {
+    height: 30px; /* Ajusta la altura según sea necesario */
+    width: 200px; /* Ajusta el ancho según sea necesario */
+}

@@ -1,0 +1,123 @@
+<div class="card">
+    <p-toast />
+    <p-toolbar styleClass="mb-4 gap-2">
+        <ng-template pTemplate="left">
+            <p-button 
+                pRipple 
+                severity="success" 
+                label="New" 
+                icon="pi pi-plus" 
+                class="mr-2" 
+                (click)="openNew()" />
+            <p-button 
+                pRipple 
+                severity="danger" 
+                label="Delete" 
+                icon="pi pi-trash" 
+                (click)="deleteSelectedProducts()" 
+                [disabled]="selectedProducts ||!selectedProducts" />
+        </ng-template>
+        <ng-template pTemplate="right">
+            <p-fileUpload 
+                mode="basic" 
+                accept="image/*" 
+                [maxFileSize]="1000000" 
+                label="Import" 
+                chooseLabel="Import" 
+                class="mr-2 inline-block" />
+            <p-button 
+                pRipple 
+                severity="help" 
+                label="Export" 
+                icon="pi pi-upload" />
+        </ng-template>
+    </p-toolbar>
+
+    <p-table
+        [value]="products"
+        [rows]="10"
+        [paginator]="true"
+        [globalFilterFields]="['nombreVariable', 'indicador', 'evaluacion', 'sentencia', 'impacto', 'dificultad']"
+        [tableStyle]="{ 'min-width': '75rem' }"
+        [(selection)]="selectedProducts"
+        [rowHover]="true"
+        dataKey="id"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [showCurrentPageReport]="true"
+    >
+        <ng-template pTemplate="header">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre de Variable</th>
+                <th scope="col">Indicador</th>
+                <th scope="col">Evaluación</th>
+                <th scope="col">Sentencia</th>
+                <th scope="col">Impacto</th>
+                <th scope="col">Dificultad</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-item>
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.nombreVariable}}</td>
+                <td>{{item.indicador}}</td>
+                <td>{{item.evaluacion}}</td>
+                <td>{{item.sentencia}}</td>
+                <td>{{item.impacto}}</td>
+                <td>{{item.dificultad}}</td>
+                <td>
+                    <p-button 
+                        pRipple 
+                        icon="pi pi-pencil" 
+                        class="mr-2" 
+                        (click)="editProduct(item)" />
+                    <p-button 
+                        pRipple 
+                        icon="pi pi-trash" 
+                        (click)="deleteProduct(item)" />
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+
+    <p-dialog 
+        [(visible)]="productDialog" 
+        [style]="{ width: '450px' }" 
+        header="Detalles del Elemento" 
+        [modal]="true" 
+        styleClass="p-fluid">
+        <!-- Contenido del diálogo adaptado a tus necesidades -->
+        <ng-template pTemplate="content">
+            <div class="p-field">
+                <label for="nombreVariable">Nombre de Variable</label>
+                <input id="nombreVariable" pInputText [(ngModel)]="product.nombreVariable" required autofocus />
+            </div>
+            <div class="p-field">
+                <label for="indicador">Indicador</label>
+                <input id="indicador" pInputText [(ngModel)]="product.indicador" required />
+            </div>
+            <div class="p-field">
+                <label for="evaluacion">Evaluación</label>
+                <input id="evaluacion" pInputText [(ngModel)]="product.evaluacion" required />
+            </div>
+            <div class="p-field">
+                <label for="sentencia">Sentencia</label>
+                <input id="sentencia" pInputText [(ngModel)]="product.sentencia" required />
+            </div>
+            <div class="p-field">
+                <label for="impacto">Impacto</label>
+                <input id="impacto" pInputText [(ngModel)]="product.impacto" required />
+            </div>
+            <div class="p-field">
+                <label for="dificultad">Dificultad</label>
+                <input id="dificultad" pInputText [(ngModel)]="product.dificultad" required />
+            </div>
+            <!-- Botón para guardar los cambios -->
+            <p-button pRipple label="Guardar" icon="pi pi-check" text [disabled]="product.nombreVariable ||!product.indicador ||!product.evaluacion ||!product.sentencia ||!product.impacto ||!product.dificultad" (click)="saveProduct()"></p-button>
+        </ng-template>
+        
+    </p-dialog>
+
+    <p-confirmDialog [style]="{ width: '450px' }" />
+</div>

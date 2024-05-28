@@ -1,0 +1,144 @@
+/* Estilos para centrar el texto en los botones */
+.p-button-label {
+    text-align: center;
+    font-size: 16px; /* Ajusta el tamaño de la fuente según sea necesario */
+}
+
+/* Estilos para centrar el contenido de las celdas de la tabla */
+.p-table td {
+    text-align: center; /* Centra el texto horizontalmente */
+    vertical-align: middle; /* Centra el contenido verticalmente */
+}
+
+/* Estilos para asegurar que el encabezado de la tabla también esté centrado */
+.p-table th {
+    text-align: center; /* Centra el texto horizontalmente */
+    vertical-align: middle; /* Centra el contenido verticalmente */
+}
+
+.p-datatable .p-datatable-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Estilos para mejorar la legibilidad de los encabezados de la tabla */
+.p-datatable .p-datatable-thead > tr > th {
+    font-weight: bold;
+    color: #343a40;
+}
+
+/* Estilos para mejorar la interacción con los botones de acción */
+.p-button-rounded {
+    border-radius: 15px;
+}
+
+/* Estilos para mejorar la apariencia de los diálogos */
+.p-dialog .p-dialog-header {
+    background-color: #007bff;
+    color: white;
+}
+
+.p-dialog .p-dialog-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Estilos para el botón "New" */
+.p-button-success {
+    background-color: #28a745; /* Color de fondo verde */
+    border-color: #28a745; /* Color del borde verde */
+    color: #fff; /* Color del texto blanco */
+}
+/*Para la tabla*/
+.tabla{
+    width: 100%;
+}
+
+
+/* Estilos para el botón de edición */
+.p-button-rounded.p-button-success {
+    background-color: #ffc107; /* Color de fondo amarillo */
+    border-color: #ffc107; /* Color del borde amarillo */
+    color: #000; /* Color del texto negro */
+}
+
+/* Estilos para el botón de eliminación */
+.p-button-rounded.p-button-warning {
+    background-color: #dc3545; /* Color de fondo rojo */
+    border-color: #dc3545; /* Color del borde rojo */
+    color: #fff; /* Color del texto blanco */
+}
+
+/* Estilos para el botón de cancelar en el diálogo */
+.p-button-text.p-button-text {
+    background-color: transparent; /* Fondo transparente */
+    border-color: transparent; /* Borde transparente */
+    color: #6c757d; /* Color del texto gris oscuro */
+}
+.btn-custom {
+    padding: 5px 8px; /* Ajusta el padding para cambiar el tamaño */
+    font-size: 10px; /* Ajusta el tamaño de la fuente para cambiar el tamaño del texto */
+}
+/*Ajustar el Tamaño del Campo de Entrada*/
+.input-group .form-control {
+    height: 38px; /* Ajusta la altura */
+    padding: 10px 20px; /* Ajusta el padding interno */
+    font-size: 16px; /* Ajusta el tamaño de la fuente */
+}
+
+/*Cambiar el Color del Botón de Búsqueda*/
+.input-group-append .btn {
+    background-color: #007bff; /* Cambia el color de fondo */
+    border-color: #007bff; /* Cambia el color del borde */
+}
+
+.input-group-append .btn:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+    border-color: #0056b3; /* Cambia el color del borde al pasar el mouse */
+}
+
+/*Ajustar espacio*/
+.input-group .form-control + .input-group-append .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/*Estilo para el Ícono de Búsqueda*/
+.input-group-append .btn i {
+    color: #fff; /* Cambia el color del ícono */
+}
+/*Ajustar estilo de boton buscar*/
+.input-group-append .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: none; /* Elimina el borde izquierdo */
+}
+/*Ajustar estilo del espaciador*/
+.input-group .form-control + .input-group-append .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: -1px; /* Ajusta el espaciado */
+}
+
+/*Estilo para el Contenedor de la Búsqueda*/
+.input-group {
+    border-radius: 25px; /* Borde redondeado */
+    background-color: #f8f9fa; /* Fondo sutil */
+}
+
+/*Estilo para el Placeholder*/
+.input-group .form-control::placeholder {
+    color: #6c757d; /* Cambia el color del texto del placeholder */
+    opacity: 1; /* Hace que el placeholder sea visible */
+}
+
+
+
+
+
+/* Estilos para el botón de guardar en el diálogo */
+.p-button-text.p-button-text {
+    background-color: transparent; /* Fondo transparente */
+    border-color: transparent; /* Borde transparente */
+    color: #28a745; /* Color del texto verde */
+}

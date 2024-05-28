@@ -1,0 +1,79 @@
+<div class="card">
+    
+    <p-table class="tabla"
+        #dt
+        [value]="variables"
+        [rows]="10"
+        [paginator]="true"
+        [tableStyle]="{ 'min-width': '75rem' }"
+        [(selection)]="selectedVariables"
+        [rowHover]="true"
+        dataKey="id"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [showCurrentPageReport]="true"
+    >
+        <ng-template pTemplate="caption">
+            <div class="flex align-items-center justify-content-between">
+                <h5 class="m-0"> </h5>
+                <span class="p-input-icon-left">
+                    <i class="pi pi-search"></i>
+                    <div class="input-group w-100">
+                        <input pInputText type="text" class="form-control flex-grow-1" (input)="onInput($event)" placeholder="Search..." />
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>  
+                        </div>
+                        <button class="btn btn-success btn-custom " style="position: absolute; right: -800px; top: 0px;"(click)="openNew()"><i class="fas fa-plus"></i> Añadir</button>
+                    </div>               
+                </span>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="width: 4rem">
+                    <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                </th>
+                <th>Id</th>
+                <th pSortableColumn="nombreVariable" style="min-width:15rem">Nombre de Variable <p-sortIcon field="nombreVariable"></p-sortIcon></th>
+                <th pSortableColumn="indicador" style="min-width: 15rem">Indicador <p-sortIcon field="indicador"></p-sortIcon></th>
+                <th pSortableColumn="evaluacion">Evaluación <p-sortIcon field="evaluacion"></p-sortIcon></th>
+                <th pSortableColumn="sentencia" style="min-width:10rem">Sentencia <p-sortIcon field="sentencia"></p-sortIcon></th>
+                <th pSortableColumn="impacto">Impacto <p-sortIcon field="impacto"></p-sortIcon></th>
+                <th pSortableColumn="dificultad" style="min-width:10rem">Dificultad <p-sortIcon field="dificultad"></p-sortIcon></th>
+                <th></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-variable>
+            <tr>
+                <td>
+                    <p-tableCheckbox [value]="variable"></p-tableCheckbox>
+                </td>
+                <td>{{ variable.id }}</td>
+                <td>{{ variable.nombreVariable }}</td>
+                <td>{{ variable.indicador }}</td>
+                <td>{{ variable.evaluacion }}</td>
+                <td>{{ variable.sentencia }}</td>
+                <td>{{ variable.impacto }}</td>
+                <td>{{ variable.dificultad }}</td>
+                <td>
+                    <button class="btn btn-primary btn-custom" (click)="editVariable(variable)"><i class="fas fa-pencil-alt"></i> Editar</button>  
+                    <button class="btn btn-danger btn-custom" (click)="deleteVariable(variable)"><i class="fas fa-trash-alt"></i> Eliminar</button>
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="summary">
+            <div class="flex align-items-center justify-content-between">In total there are {{ variables ? variables.length : 0 }} variables.</div>
+        </ng-template>
+    </p-table>
+</div>
+<p-dialog [(visible)]="variableDialog" [style]="{ width: '450px' }" header="Variable Details" [modal]="true" styleClass="p-fluid">
+    <ng-template pTemplate="content">
+        <!-- Aquí puedes adaptar el contenido del diálogo para manejar las variables -->
+    </ng-template>
+
+    <ng-template pTemplate="footer">
+        <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-text" (click)="hideDialog()"></button>
+        <button pButton pRipple label="Save" icon="pi pi-check" class="p-button-text" (click)="saveVariable()"></button>
+    </ng-template>
+</p-dialog>
+
+<p-confirmDialog [style]="{ width: '450px' }"></p-confirmDialog>

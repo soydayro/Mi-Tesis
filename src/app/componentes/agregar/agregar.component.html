@@ -1,0 +1,70 @@
+
+<div class="card">
+    <div class="card-header">Agregar</div>
+    <div class="card-body">
+        <form [formGroup]="formularioDeVariable">
+            <div class="mb-3">
+                <label for="nombreVariable" class="form-label">Nombre de Variable</label>
+                <input type="text" class="form-control" formControlName="nombreVariable" id="nombreVariable" aria-describedby="nombreHelp" placeholder="Escribe el nombre de la Variable">
+                <div *ngIf="formularioDeVariable.controls['nombreVariable'].errors?.['required'] && (formularioDeVariable.controls['nombreVariable'].dirty || formularioDeVariable.controls['nombreVariable'].touched)" class="text-danger">
+                    El nombre de variable es requerido.
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="indicador" class="form-label">Indicador</label>
+                <input type="text" class="form-control" formControlName="indicador" id="indicador" aria-describedby="indicadorHelp" placeholder="Escriba el Indicador">
+                <div *ngIf="formularioDeVariable.controls['indicador'].errors?.['required'] && (formularioDeVariable.controls['indicador'].dirty || formularioDeVariable.controls['indicador'].touched)" class="text-danger">
+                    El indicador es requerido.
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="evaluacion" class="form-label">Evaluación</label>
+                <input type="text" class="form-control" formControlName="evaluacion" id="evaluacion" aria-describedby="evaluacionHelp" placeholder="Escribe la evaluación">
+                <div *ngIf="formularioDeVariable.controls['evaluacion'].errors?.['required'] && (formularioDeVariable.controls['evaluacion'].dirty || formularioDeVariable.controls['evaluacion'].touched)" class="text-danger">
+                    La evaluación es requerida.
+                </div>
+                <div *ngIf="formularioDeVariable.controls['evaluacion'].errors?.['pattern'] && (formularioDeVariable.controls['evaluacion'].dirty || formularioDeVariable.controls['evaluacion'].touched)" class="text-danger">
+                    La evaluación solo puede contener enteros o decimales.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="sentencia" class="form-label">Sentencia</label>
+                <input type="text" class="form-control" formControlName="sentencia" id="sentencia" aria-describedby="sentenciaHelp" placeholder="Escribe la sentencia">
+                <div *ngIf="formularioDeVariable.controls['sentencia'].errors?.['required'] && (formularioDeVariable.controls['sentencia'].dirty || formularioDeVariable.controls['sentencia'].touched)" class="text-danger">
+                    La sentencia es requerida.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="impacto" class="form-label">Impacto</label>
+                <input type="text" class="form-control" formControlName="impacto" id="impacto" aria-describedby="impactoHelp" placeholder="Escribe el impacto">
+                <div *ngIf="formularioDeVariable.controls['impacto'].errors?.['required'] && (formularioDeVariable.controls['impacto'].dirty || formularioDeVariable.controls['impacto'].touched)" class="text-danger">
+                    El impacto es requerido.
+                </div>
+                <div *ngIf="formularioDeVariable.controls['impacto'].errors?.['pattern'] && (formularioDeVariable.controls['impacto'].dirty || formularioDeVariable.controls['impacto'].touched)" class="text-danger">
+                    El impacto solo puede contener números.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="dificultad" class="form-label">Dificultad</label>
+                <input type="text" class="form-control" formControlName="dificultad" id="dificultad" aria-describedby="dificultadHelp" placeholder="Escribe la dificultad">
+                <div *ngIf="formularioDeVariable.controls['dificultad'].errors?.['required'] && (formularioDeVariable.controls['dificultad'].dirty || formularioDeVariable.controls['dificultad'].touched)" class="text-danger">
+                    La dificultad es requerida.
+                </div>
+                <div *ngIf="formularioDeVariable.controls['dificultad'].errors?.['pattern'] && (formularioDeVariable.controls['dificultad'].dirty || formularioDeVariable.controls['dificultad'].touched)" class="text-danger">
+                    La dificultad solo puede contener números.
+                </div>
+            </div>
+    
+            <div class="btn-group" role="group" aria-label="">
+                <button type="button" class="btn btn-success" (click)="enviarDatos()">Agregar</button>
+                <button type="button" class="btn btn-primary" (click)="volver()">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    
+</div>

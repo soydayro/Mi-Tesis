@@ -1,0 +1,54 @@
+<div class="card">
+        <div class="card-header">
+            <span class="text-lg font-weight-bold">Variable</span>
+            <a href="/agregar" class="btn btn-primary text-decoration-none ms-2">
+                <i class="fas fa-plus"></i> Agregar
+            </a>      
+            <!--<input type="text" class="form-control custom-input-small" placeholder="Buscar...">-->
+        </div>
+    
+    <div class="card-body">
+        <div
+            class="table-responsive"
+        >
+            <table
+                class="table table-primary"
+            >
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nombre de Variable</th>
+                        <th scope="col">Indicador</th>
+                        <th scope="col">Evaluación</th>
+                        <th scope="col">Sentencia</th>
+                        <th scope="col">Impacto</th>
+                        <th scope="col">Dificultad</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr *ngFor="let variable of Variables; let iControl=index">
+                        <td>{{variable.id}}</td>
+                        <td>{{variable.nombreVariable}}</td>
+                        <td>{{variable.indicador}}</td>
+                        <td>{{variable.evaluacion}}</td>
+                        <td>{{variable.sentencia}}</td>
+                        <td>{{variable.impacto}}</td>
+                        <td>{{variable.dificultad}}</td>
+                        <td>
+                            <a href="/editar/{{variable.id}}" class="btn btn-info text-decoration-none">
+                                <i class="fas fa-edit"></i> Editar
+                            </a>| 
+                             <a class="btn btn-danger text-decoration-none" href="#" (click)="borrarRegistro(variable.id,iControl)" role="button">
+                                <i class="fas fa-trash-alt"></i> Eliminar
+                            </a>                            
+                            </td>  
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    
+</div>
