@@ -46,6 +46,16 @@ buscarVariables(nombreVariable: string): void {
     this.Variables = respuesta;
   });
 }
+ordenAscendente = true;
+
+ordenarPor(campo: string): void {
+  if (this.ordenAscendente) {
+    this.Variables.sort((a, b) => a[campo] > b[campo] ? 1 : -1);
+  } else {
+    this.Variables.sort((a, b) => a[campo] < b[campo] ? 1 : -1);
+  }
+  this.ordenAscendente = !this.ordenAscendente;
+}
 
 
 

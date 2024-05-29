@@ -12,10 +12,25 @@
    
 }
 .card{
-  margin-top: 15px;
-margin-left: 35px;
-margin-right: 35px;
+margin-top: 15px;
+margin-left: 25px;
+margin-right: 25px;
 box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.2);
+
+.ordenar {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color:black;
+  font-size: 0.75rem; /* Ajusta el tamaño de las flechas */
+  padding: 0;
+  
+}
+
+.ordenar:hover {
+  color: #0056b3;
+}
+
 
 }
 .btn-custom{
@@ -42,8 +57,9 @@ color: white;
 }
 th{
 
-  font-size: 20px;
+  font-size: 15px;
   font-family: 'Arial Narrow';
+  min-width: auto; /* Aumenta el ancho mínimo según sea necesario */
   
 }
 td{
