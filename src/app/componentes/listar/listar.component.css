@@ -22,9 +22,12 @@ box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.2);
   border: none;
   cursor: pointer;
   color:black;
-  font-size: 0.75rem; /* Ajusta el tamaño de las flechas */
   padding: 0;
-  
+  font-size: 20px;
+  font-family: 'Arial Narrow';
+  min-width: auto; 
+  font-weight: bold;
+  /*Para poner las fechhitas &#8593;&#8595 es en el html*/
 }
 
 .ordenar:hover {
@@ -57,9 +60,10 @@ color: white;
 }
 th{
 
-  font-size: 15px;
+  font-size: 20px;
   font-family: 'Arial Narrow';
   min-width: auto; /* Aumenta el ancho mínimo según sea necesario */
+  font-weight: bold;
   
 }
 td{
