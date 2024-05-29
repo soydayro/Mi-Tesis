@@ -56,9 +56,6 @@ ordenarPor(campo: string): void {
   }
   this.ordenAscendente = !this.ordenAscendente;
 }
-
-
-
 }
 
 

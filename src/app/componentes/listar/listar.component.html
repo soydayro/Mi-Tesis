@@ -29,10 +29,10 @@
         </div> 
         <div class="card-body">
           <div class="table-responsive">
-            <table class="table ">
+            <table class="table">
               <thead>
                 <tr>
-                  <th scope="col">ID</th>
+                  <th scope="col">#</th>
                   <th scope="col">
                     Variable
                     <button class="ordenar" (click)="ordenarPor('nombreVariable')">&#8593;&#8595;</button>
@@ -61,8 +61,8 @@
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let variable of Variables; let iControl=index">
-                  <td>{{variable.id}}</td>
+                <tr *ngFor="let variable of Variables; let i = index">
+                  <td>{{i + 1}}</td>
                   <td>{{variable.nombreVariable}}</td>
                   <td>{{variable.indicador}}</td>
                   <td>{{variable.evaluacion}}</td>
@@ -72,7 +72,7 @@
                   <td>
                     <a href="/editar/{{variable.id}}" id="btn-editar" class="btn  text-decoration-none">
                       <i class="fas fa-edit"></i> Editar</a>
-                    <a id="btn-eliminar" class="btn text-decoration-none" href="#" (click)="borrarRegistro(variable.id,iControl)" role="button">
+                    <a id="btn-eliminar" class="btn text-decoration-none" href="#" (click)="borrarRegistro(variable.id,i)" role="button">
                       <i class="fas fa-trash-alt"></i> Eliminar
                     </a>                            
                   </td>  
