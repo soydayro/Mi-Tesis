@@ -18,8 +18,15 @@
         <div class="card-header d-flex align-items-center justify-content-start gap-3" style="background-color: white;">
           <span class="titulo">SENTENCIAS</span>
             
-         
-          <input id="buscador" type="text" class="form-control custom-input-small ml-auto" placeholder="Buscar...">
+         <!--Aqui es eso del buscar-->
+          <div class="d-flex justify-content-end buscar">
+            <input #buscadorId id="buscador" type="text" class="form-control custom-input-small ml-1" placeholder="Variable..." />
+
+            <button (click)="buscarVariables(buscadorId.value)">Buscar</button>
+
+          </div>
+          
+
         </div> 
         <div class="card-body">
           <div class="table-responsive">

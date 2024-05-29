@@ -57,9 +57,7 @@ td{
   padding-top: 5px;
 
 }
-#buscador{
-  margin-right: 25px;
-}
+
 #btn-eliminar{
   color: red;
   font-size: 15px;
@@ -92,6 +90,7 @@ td{
   margin: 0;
   padding: 0;
   height: auto;
+  min-height: 100vh;
 }
 
   
@@ -104,6 +103,43 @@ td{
 
   }
 
+  .buscar {
+    position: absolute;
+    top: 12px; /* Ajusta según sea necesario */
+    right: 35px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    margin-right: 35px;
+    margin-top: 20px;
+    padding: 0%;
+    margin: 0%;
+  }
+  
+  .buscar input {
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    justify-content: flex-end;
+  }
+  
+  .buscar button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .buscar button:hover {
+    background-color: #0056b3;
+  }
+  
 
   /* Estilos para la barra de navegación */
 /*.navbar {
