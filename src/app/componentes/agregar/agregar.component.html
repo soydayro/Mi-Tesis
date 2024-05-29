@@ -16,7 +16,7 @@
         <form [formGroup]="formularioDeVariable">
             <div class="mb-3">
                 <label for="nombreVariable" class="form-label">Nombre de Variable</label>
-                <input type="text" class="form-control" formControlName="nombreVariable" id="nombreVariable" aria-describedby="nombreHelp" placeholder="Escribe el nombre de la Variable">
+                <input type="text" class="form-control" formControlName="nombreVariable" id="nombreVariable" aria-describedby="nombreHelp" placeholder="Escribe el nombre de la variable">
                 <div *ngIf="formularioDeVariable.controls['nombreVariable'].errors?.['required'] && (formularioDeVariable.controls['nombreVariable'].dirty || formularioDeVariable.controls['nombreVariable'].touched)" class="text-danger">
                     El nombre de variable es requerido.
                 </div>
@@ -24,7 +24,7 @@
             
             <div class="mb-3">
                 <label for="indicador" class="form-label">Indicador</label>
-                <input type="text" class="form-control" formControlName="indicador" id="indicador" aria-describedby="indicadorHelp" placeholder="Escriba el Indicador">
+                <input type="text" class="form-control" formControlName="indicador" id="indicador" aria-describedby="indicadorHelp" placeholder="Escriba el indicador">
                 <div *ngIf="formularioDeVariable.controls['indicador'].errors?.['required'] && (formularioDeVariable.controls['indicador'].dirty || formularioDeVariable.controls['indicador'].touched)" class="text-danger">
                     El indicador es requerido.
                 </div>
@@ -32,7 +32,7 @@
             
             <div class="mb-3">
                 <label for="evaluacion" class="form-label">Evaluación</label>
-                <input type="text" class="form-control" formControlName="evaluacion" id="evaluacion" aria-describedby="evaluacionHelp" placeholder="Escribe la evaluación">
+                <input type="text" class="form-control" formControlName="evaluacion" id="evaluacion" aria-describedby="evaluacionHelp" placeholder="Escribe el resultado de la evaluación">
                 <div *ngIf="formularioDeVariable.controls['evaluacion'].errors?.['required'] && (formularioDeVariable.controls['evaluacion'].dirty || formularioDeVariable.controls['evaluacion'].touched)" class="text-danger">
                     La evaluación es requerida.
                 </div>
@@ -51,7 +51,7 @@
 
             <div class="mb-3">
                 <label for="impacto" class="form-label">Impacto</label>
-                <input type="text" class="form-control" formControlName="impacto" id="impacto" aria-describedby="impactoHelp" placeholder="Escribe el impacto">
+                <input type="text" class="form-control" formControlName="impacto" id="impacto" aria-describedby="impactoHelp" placeholder="Escribe el nivel de impacto de la variable para un buen SEO">
                 <div *ngIf="formularioDeVariable.controls['impacto'].errors?.['required'] && (formularioDeVariable.controls['impacto'].dirty || formularioDeVariable.controls['impacto'].touched)" class="text-danger">
                     El impacto es requerido.
                 </div>
@@ -62,7 +62,7 @@
 
             <div class="mb-3">
                 <label for="dificultad" class="form-label">Dificultad</label>
-                <input type="text" class="form-control" formControlName="dificultad" id="dificultad" aria-describedby="dificultadHelp" placeholder="Escribe la dificultad">
+                <input type="text" class="form-control" formControlName="dificultad" id="dificultad" aria-describedby="dificultadHelp" placeholder="Escribe el nivel de dificultad de modificar la variable">
                 <div *ngIf="formularioDeVariable.controls['dificultad'].errors?.['required'] && (formularioDeVariable.controls['dificultad'].dirty || formularioDeVariable.controls['dificultad'].touched)" class="text-danger">
                     La dificultad es requerida.
                 </div>
@@ -71,10 +71,9 @@
                 </div>
             </div>
     
-            <div class="btn-group botones" role="group" aria-label="">
-                <button type="button" class="btn btn-cancelar text-decoration-none me-3 "  (click)="volver()">Cancelar</button>
+            <div class=" botones" role="group" aria-label="">
+                <button type="button" class="btn btn-cancelar text-decoration-none me-3"  (click)="volver()">Cancelar</button>
                 <button type="button" class="btn btn-agregar text-decoration-none" (click)="enviarDatos()">Agregar</button>
-                
             </div>
         </form>
     </div>

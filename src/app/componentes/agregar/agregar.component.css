@@ -52,25 +52,35 @@
 }
 
 .btn-cancelar {
-  color: rgb(4, 4, 92); /* Color del texto */
-  font-size: 14px; /* Reduce el tamaño del texto */
-  padding: 5px 10px; /* Reduce el padding para hacer el botón más pequeño */
-  margin-top: 0%;
-  border: 2px solid rgb(4, 4, 92); /* Agrega un borde visible */
-  background-color: transparent; /* Asegura que el fondo sea transparente para mostrar el borde */
-  cursor: pointer; /* Cambia el cursor al pasar el mouse sobre el botón */
-  font-family: 'Font Awesome 5 Free';
+  border-radius: 15px;
+  color: rgb(4, 4, 92);
+  /*Colordeltexto*/font-size: 14px;
+  /*Reduceeltamañodeltexto*/padding: 5px 10px;
+  /*Reduceelpaddingparahacerelbotónmáspequeño*/margin-top: 0%;
+  border: 2px solid rgb(4, 4, 92);
+  /*Agregaunbordevisible*/background-color: transparent;
+  /*Aseguraqueelfondoseatransparenteparamostrarelborde*/cursor: pointer;
+  /*Cambiaelcursoralpasarelmousesobreelbotón*/font-family: 'Font Awesome 5 Free';
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
 }
 
 .btn-agregar {
-  color: white; /* Color del texto */
-  font-size: 14px; /* Reduce el tamaño del texto */
-  padding: 5px 10px; /* Reduce el padding para hacer el botón más pequeño */
-  margin-top: 0%;
-  border: 2px solid rgb(4, 4, 92); /* Agrega un borde visible */
-  background-color: rgb(4, 4, 92); /* Asegura que el fondo sea transparente para mostrar el borde */
-  cursor: pointer; /* Cambia el cursor al pasar el mouse sobre el botón */
-  font-family: 'Font Awesome 5 Free';
+  color: white;
+  /*Colordeltexto*/font-size: 14px;
+  /*Reduceeltamañodeltexto*/padding: 5px 10px;
+  /*Reduceelpaddingparahacerelbotónmáspequeño*/margin-top: 0%;
+  border: 2px solid rgb(4, 4, 92);
+  /*Agregaunbordevisible*/background-color: rgb(4, 4, 92);
+  /*Aseguraqueelfondoseatransparenteparamostrarelborde*/cursor: pointer;
+  /*Cambiaelcursoralpasarelmousesobreelbotón*/font-family: 'Font Awesome 5 Free';
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
 }
 
 /* Asegúrate de que la barra lateral tenga un ancho fijo si deseas mantenerla visible */
