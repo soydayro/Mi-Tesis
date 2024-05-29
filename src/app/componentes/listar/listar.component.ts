@@ -38,6 +38,13 @@ borrarRegistro(id:number,iContrl:any){
   this.ruteador.navigateByUrl('/listar');
 }
 
+buscarVariables(nombreVariable:string): void {
+  this.crudService.BuscarPorNombre(nombreVariable).subscribe(respuesta => {
+    console.log(respuesta)
+    //this.Variables[] = respuesta;
+  });
+}
+
 }
 
 

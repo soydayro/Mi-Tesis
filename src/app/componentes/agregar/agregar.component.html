@@ -1,6 +1,17 @@
 
-<div class="card">
-    <div class="card-header">Agregar</div>
+
+  <div class="app-content">
+    <div class="sidebar">
+        <a href="/"><img src="https://seowebmas.redcuba.cu/favicon.ico" alt="Logo" width="80" height="80"></a>
+    </div>
+
+    <div class="" style="background-color: rgb(252, 249, 206);">
+        <!--<div id="agregar" class="d-flex justify-content-end" ><a href="/listar" class="btn btn-success text-decoration-none align-content-end btn-custom " style="font-size: 13px; background-color:  color rgb(1, 173, 29); ;" id="boton">
+            <i class="fas fa-plus " style="font-size: 10px; margin-right: 3px;" ></i> SENTENCIAS
+        </a> </div>-->
+
+<div class="card formulario">
+    <div class="card-header d-flex align-items-center justify-content-start gap-3 titulo " style="background-color: white;">AGREGAR SENTENCIA</div>
     <div class="card-body">
         <form [formGroup]="formularioDeVariable">
             <div class="mb-3">
@@ -60,11 +71,12 @@
                 </div>
             </div>
     
-            <div class="btn-group" role="group" aria-label="">
-                <button type="button" class="btn btn-success" (click)="enviarDatos()">Agregar</button>
-                <button type="button" class="btn btn-primary" (click)="volver()">Cancelar</button>
+            <div class="btn-group botones" role="group" aria-label="">
+                <button type="button" class="btn btn-cancelar text-decoration-none me-3 "  (click)="volver()">Cancelar</button>
+                <button type="button" class="btn btn-agregar text-decoration-none" (click)="enviarDatos()">Agregar</button>
+                
             </div>
         </form>
     </div>
-    
+</div>
 </div>

@@ -37,4 +37,8 @@ export class CrudService{
       
     }
 
+    BuscarPorNombre(nombreVariable:string){
+      return this.clienteHttp.get<Variable>(this.API+"buscar/nombre/"+nombreVariable);
+    }
+
 }

@@ -1,54 +1,62 @@
-<div class="card">
-        <div class="card-header">
-            <span class="text-lg font-weight-bold">Variable</span>
-            <a href="/agregar" class="btn btn-primary text-decoration-none ms-2">
-                <i class="fas fa-plus"></i> Agregar
-            </a>      
-            <!--<input type="text" class="form-control custom-input-small" placeholder="Buscar...">-->
-        </div>
-    
-    <div class="card-body">
-        <div
-            class="table-responsive"
-        >
-            <table
-                class="table table-primary"
-            >
-                <thead>
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Nombre de Variable</th>
-                        <th scope="col">Indicador</th>
-                        <th scope="col">Evaluación</th>
-                        <th scope="col">Sentencia</th>
-                        <th scope="col">Impacto</th>
-                        <th scope="col">Dificultad</th>
-                        <th scope="col">Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
+<!-- Barra de Navegación -->
 
-                    <tr *ngFor="let variable of Variables; let iControl=index">
-                        <td>{{variable.id}}</td>
-                        <td>{{variable.nombreVariable}}</td>
-                        <td>{{variable.indicador}}</td>
-                        <td>{{variable.evaluacion}}</td>
-                        <td>{{variable.sentencia}}</td>
-                        <td>{{variable.impacto}}</td>
-                        <td>{{variable.dificultad}}</td>
-                        <td>
-                            <a href="/editar/{{variable.id}}" class="btn btn-info text-decoration-none">
-                                <i class="fas fa-edit"></i> Editar
-                            </a>| 
-                             <a class="btn btn-danger text-decoration-none" href="#" (click)="borrarRegistro(variable.id,iControl)" role="button">
-                                <i class="fas fa-trash-alt"></i> Eliminar
-                            </a>                            
-                            </td>  
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
+  
+  <div class="app-content">
+    <div class="sidebar">
+      <a href="/"><img src="https://seowebmas.redcuba.cu/favicon.ico" alt="Logo" width="80" height="80"></a>
+
+      
     </div>
     
-</div>
+    <div class="" style="background-color: rgb(252, 249, 206);">
+      <div id="agregar" class="d-flex justify-content-end" ><a href="/agregar" class="btn btn-success text-decoration-none align-content-end btn-custom " style="font-size: 13px; background-color:  color rgb(4, 4, 92); ;" id="boton">
+          <i class="fas fa-plus " style="font-size: 10px; margin-right: 3px;" ></i> AGREGAR SENTENCIA
+      </a> </div>
+    
+      <div  class="card">
+    
+        <div class="card-header d-flex align-items-center justify-content-start gap-3" style="background-color: white;">
+          <span class="titulo">SENTENCIAS</span>
+            
+         
+          <input id="buscador" type="text" class="form-control custom-input-small ml-auto" placeholder="Buscar...">
+        </div> 
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Variable</th>
+                  <th scope="col">Indicador</th>
+                  <th scope="col">Evaluación</th>
+                  <th scope="col">Sentencia</th>
+                  <th scope="col">Impacto</th>
+                  <th scope="col">Dificultad</th>
+                  <th scope="col">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let variable of Variables; let iControl=index">
+                  <td>{{variable.id}}</td>
+                  <td>{{variable.nombreVariable}}</td>
+                  <td>{{variable.indicador}}</td>
+                  <td>{{variable.evaluacion}}</td>
+                  <td>{{variable.sentencia}}</td>
+                  <td>{{variable.impacto}}</td>
+                  <td>{{variable.dificultad}}</td>
+                  <td>
+                    <a href="/editar/{{variable.id}}" id="btn-editar" class="btn  text-decoration-none">
+                      <i class="fas fa-edit"></i> Editar</a>
+                    <a id="btn-eliminar" class="btn text-decoration-none" href="#" (click)="borrarRegistro(variable.id,iControl)" role="button">
+                      <i class="fas fa-trash-alt"></i> Eliminar
+                    </a>                            
+                  </td>  
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

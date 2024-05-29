@@ -1,0 +1,138 @@
+/* Estilos generales y de contenedor */
+.container{
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+}
+
+/* Estilos para el encabezado de la tarjeta */
+.card-header span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Estilos para la tarjeta completa */
+/* Ajusta el estilo de la tarjeta para que ocupe todo el espacio disponible */
+.card {
+  margin: 0;
+  margin-left: 35px; /* Mantén un pequeño margen izquierdo para evitar que la tarjeta esté pegada a la barra lateral */
+  margin-right: 35px;
+  box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.2);
+  width: calc(100% - 70px); /* Calcula el ancho restante después de considerar los márgenes */
+}
+
+
+.card-body{
+  margin: 0%;
+  padding-top: 0%;
+}
+
+/* Estilos para el título dentro del encabezado de la tarjeta */
+.titulo{
+  font-size: 25;
+  font-family:'Arial Narrow' ;
+  margin-left: 10px;
+  margin-right: 15px;
+  font-weight: bold; /* Añade esta línea para hacer el texto en negrita */
+}
+
+.formulario {
+  margin-top: 20px; /* Empuja el formulario hacia abajo */
+}
+
+/*button {
+  width: 110px; 
+  height: 40px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}*/
+
+.botones{
+  float: right;
+}
+
+.btn-cancelar {
+  color: rgb(4, 4, 92); /* Color del texto */
+  font-size: 14px; /* Reduce el tamaño del texto */
+  padding: 5px 10px; /* Reduce el padding para hacer el botón más pequeño */
+  margin-top: 0%;
+  border: 2px solid rgb(4, 4, 92); /* Agrega un borde visible */
+  background-color: transparent; /* Asegura que el fondo sea transparente para mostrar el borde */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse sobre el botón */
+  font-family: 'Font Awesome 5 Free';
+}
+
+.btn-agregar {
+  color: white; /* Color del texto */
+  font-size: 14px; /* Reduce el tamaño del texto */
+  padding: 5px 10px; /* Reduce el padding para hacer el botón más pequeño */
+  margin-top: 0%;
+  border: 2px solid rgb(4, 4, 92); /* Agrega un borde visible */
+  background-color: rgb(4, 4, 92); /* Asegura que el fondo sea transparente para mostrar el borde */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse sobre el botón */
+  font-family: 'Font Awesome 5 Free';
+}
+
+/* Asegúrate de que la barra lateral tenga un ancho fijo si deseas mantenerla visible */
+.sidebar {
+  background-color: rgb(4, 4, 92);
+  padding: 20px;
+  width: 170px; /* Ancho fijo para la barra lateral */
+}
+.container{
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+
+}
+.card-header span {
+    font-size: 1.5rem; /* Aumenta el tamaño del texto */
+    font-weight: bold; /* Hace que el texto sea negrita */
+   
+   
+}
+
+.btn-custom{
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  margin-right: 35px;
+  margin-top: 20px;
+ 
+ color: white;
+ 
+ }
+
+.card-body{
+  margin: 0%;
+ padding-top: 0%;
+}
+
+.agregar{
+  padding: 0%;
+  margin: 0%;
+}
+.custom-input-small {
+    height: 30px; /* Ajusta la altura según sea necesario */
+    width: 200px; /* Ajusta el ancho según sea necesario */
+}
+.ml-auto {
+    margin-left: auto;
+}
+
+.app-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+input[type="text"] {
+  width: 1100px; /* Aumenta el ancho */
+  height: 35px; /* Aumenta la altura */
+  padding: 10px; /* Añade un poco de relleno para mejorar la legibilidad */
+  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+}
